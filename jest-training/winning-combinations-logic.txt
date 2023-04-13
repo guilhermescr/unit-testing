@@ -1,0 +1,51 @@
+line = [0, 1, 1, 2, 2, 2]; one sequence - result: [number, [indexesOfAllTheSequence] ]; two sequences - result: [ [number, [indexesOfAllTheSequence] ] , [number, [indexesOfAllTheSequence] ] ]
+expected result: [ [1, [0, 1, 2] ], [2, [3, 4, 5] ] ];
+nonPayingSymbols = [10, 11, 12, 13, 14, 15];
+sequencesIndexes = {
+  s1: [],
+  s2: []
+};
+let isCombinedWithWildSymbol = false;
+
+ -> [1, 0, 0, 2, 2, 2]
+
+[2, 0, 2, 0, 5, 5] -> [2, [0, 1, 2, 3] ], [5, [3, 4, 5] ]
+[2, 0, 0, 5, 5]
+
+( lineElement === 0 && (line[iterationIndex - 1] !== line[iterationIndex + 1] && line[iterationIndex + 1] !== 0) ) {
+  // initializes new sequence
+  sequenceIndexes.s2.push();
+}
+
+1. Create a variable called sequenceSymbol and store the first value of line on it.
+2. Make a for() loop iterating through line elements.
+3. In each iteration, check if nonPayingSymbols.includes(lineElement);
+4. If it includes {
+    sequenceIndexes.s1 = [];
+    sequenceSymbol = line[iterationIndex + 1];
+    continue; // continue will make for() go to the next element
+}
+if (line element === 0) {
+  isCombinedWithWildSymbol = true;
+}
+if (lineElement === sequenceSymbol || isCombinedWithWildSymbol || line[iterationIndex - 1] === 0):
+   if (isCombinedWithWildSymbol && line[iterationIndex + 1] !== 0) {
+     isCombinedWithWildSymbol = false;
+   }
+   if (lineElement !== 0) {
+      sequenceSymbol = lineElement;
+   }
+   sequenceLength++;
+   if (!sequences.length)
+   sequenceIndexes.s1.push(iterationIndex);
+Else {
+  if (sequenceLength >= 3) {
+   sequences.push({ sequenceNumber: sequenceSymbol, indexes: sequenceIndexes })
+  }
+   sequenceLength = 1; // because this new sequence starts here
+   sequenceIndexes.s1 = [iterationIndex];
+   sequenceSymbol = line[iterationIndex];
+}
+6. Out of the for() loop, if (sequenceLength >= 3) {
+   sequences.push({ sequenceNumber: sequenceSymbol, indexes: sequenceIndexes })
+  }
