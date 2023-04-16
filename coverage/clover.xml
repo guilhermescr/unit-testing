@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681481457679" clover="3.2.0">
-  <project timestamp="1681481457679" name="All files">
+<coverage generated="1681665981923" clover="3.2.0">
+  <project timestamp="1681665981923" name="All files">
     <metrics statements="25" coveredstatements="25" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2" elements="37" coveredelements="37" complexity="0" loc="25" ncloc="25" packages="1" files="1" classes="1"/>
     <file name="winning-combinations.ts" path="C:\Users\userr\Documents\gui\estudos\programacao\unit-testing\jest-training\challenges\winning-combinations.ts">
       <metrics statements="25" coveredstatements="25" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2"/>
